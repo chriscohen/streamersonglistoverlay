@@ -37,3 +37,8 @@ body {
 .caps {
     text-transform: uppercase;
 }
+
+.more {
+    font-weight: bold;
+    text-align: right;
+}
