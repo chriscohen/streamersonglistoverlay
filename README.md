@@ -34,3 +34,33 @@ Add a new Browser Source to your overlays. This should be at a width of 480, and
 Pick **use local file** and then find the ```queue.html``` file from your download, such as **C:\streamoverlays\queue.html**.
 
 When you save, you should see the queue (or lack of queue) show up in the overlay immediately.
+
+## Settings
+
+You can customise a lot of settings by editing the ```const``` values at the top of ```lib/streamersonglist.js```. Just open it in your favourite text editor and refer to the settings below for an explanation.
+
+### apiUrl
+
+The URL where the streamersonglist.com API is found. You will not need to edit this!
+
+### streamerName
+
+Your name on Twitch. This should match the name you're using on streamersonglist.com as well, which is normally automatic when you sign up.
+
+### streamerId
+
+Not currently used.
+
+### allCaps
+
+If this is ```true```, it will cause the queue to be shown in capital letters all the time. If this is ```false```, a mix of upper case and lower case will be used.
+
+### maxQueueItems
+
+The maximum number of items that will be shown in the queue. For example, if you set this to ```3```, only the first three items in the queue will appear. See **showMore** if you want to let viewers know that there are more than your maximum number of items in the queue.
+
+Note that setting this to ```0``` will not cause an unlimited number of items to be shown. If you want an unlimited number to be shown, set this to ```999``` or another really high value. This is not recommended, because eventually the bottom of the queue will go off the screen!
+
+### showMore
+
+If ```true```, a "+X more in queue" message will appear at the bottom of the queue when there's more items in the queue than **maxQueueItems**. Set this to ```false``` if you don't want this to show at the bottom.
