@@ -1,0 +1,39 @@
+body {
+    background: none;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#queue-wrapper {
+    width: 480px;
+    background: none;
+}
+
+#queue-wrapper > div {
+    background: rgba(0, 0, 0, 0.8);
+    height: 36px;
+    line-height: 36px;
+    color: rgb(255, 255, 255);
+    padding-left: 16px;
+    font-size: 14px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+
+.artist {
+    white-space: nowrap;
+}
+
+.title {
+    font-weight: 800;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 16px;
+}
+
+.caps {
+    text-transform: uppercase;
+}
