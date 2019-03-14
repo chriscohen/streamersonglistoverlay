@@ -35,6 +35,12 @@ Pick **use local file** and then find the ```queue.html``` file from your downlo
 
 When you save, you should see the queue (or lack of queue) show up in the overlay immediately.
 
+## Known issues
+
+Because we need to make two different API requests sometimes, not all the data will load in, when the page (overlay) first loads. It will update properly once it refreshes for the first time.
+
+For example, if you have a maximum number of requests, it will always show as 0 when the overlay first loads, and will update after ten seconds.
+
 ## Settings
 
 You can customise a lot of settings by editing the ```const``` values at the top of ```lib/streamersonglist.js```. Just open it in your favourite text editor and refer to the settings below for an explanation.
@@ -66,3 +72,11 @@ Note that setting this to ```0``` will not cause an unlimited number of items to
 ### showMore
 
 If ```true```, a "+X more in queue" message will appear at the bottom of the queue when there's more items in the queue than **maxQueueItems**. Set this to ```false``` if you don't want this to show at the bottom.
+
+# showSongLimit
+
+If set to ```true```, will show the request limit current configured in Streamer Song List. Note that the API currently doesn't support showing the number of songs remaining; only the total number allowed.
+
+# songLimitMessage
+
+If showSongLimit is ```true```, this controls the message that will appear on the screen. The # will be replaced by the maximum number of requests, and plurals (request/requests) will be handled automatically.
