@@ -45,7 +45,9 @@ The URL where the streamersonglist.com API is found. You will not need to edit t
 
 ### streamerName
 
-Your name on Twitch. This should match the name you're using on streamersonglist.com as well, which is normally automatic when you sign up.
+Your name on Twitch, in lower case. This should match the name you're using on streamersonglist.com as well, which is normally automatic when you sign up.
+
+For example, if your name on Twitch is "My_Cool_Name", you would use "my_cool_name" (lower case).
 
 ### streamerId
 
