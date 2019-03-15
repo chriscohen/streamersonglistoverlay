@@ -73,10 +73,14 @@ Note that setting this to ```0``` will not cause an unlimited number of items to
 
 If ```true```, a "+X more in queue" message will appear at the bottom of the queue when there's more items in the queue than **maxQueueItems**. Set this to ```false``` if you don't want this to show at the bottom.
 
-# showSongLimit
+### showSongLimit
 
-If set to ```true```, will show the request limit current configured in Streamer Song List. Note that the API currently doesn't support showing the number of songs remaining; only the total number allowed.
+If set to something other than ```no```, will show the request limit current configured in Streamer Song List.
+  
+ There are two possible values you could use here:
+ - ```maximum``` will show the total number of requests allowed for this stream, as set by your "Song Limit" in the Streamer Song List queue settings.
+ - ```remaining``` will show the number of requests that are remaining, which is the maximum minus the number that have already been played.
 
-# songLimitMessage
+### songLimitMessage
 
-If showSongLimit is ```true```, this controls the message that will appear on the screen. The # will be replaced by the maximum number of requests, and plurals (request/requests) will be handled automatically.
+If showSongLimit is ```remaining```, this controls the message that will appear on the screen. The ```#``` will be replaced by the remaining number of requests, and plurals (request/requests) will be handled automatically.
